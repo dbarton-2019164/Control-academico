@@ -1,6 +1,6 @@
-const { Scheema, model } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
-const UserScheema = Scheema({
+const UserSchema = Schema({
   nombre: {
     type: String,
     required: [true, "El nombre es obligatorio"],
@@ -23,6 +23,13 @@ const UserScheema = Scheema({
     type: Boolean,
     default: true,
   },
+
+  materia: [
+    // Asignar ALUMNOS
+    {
+      nombre: String,
+    },
+  ],
 });
 
-module.exports = model("Usuario", UserScheema);
+module.exports = model("Usuario", UserSchema);
