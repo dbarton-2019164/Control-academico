@@ -3,6 +3,8 @@ const { response, json } = require("express");
 const bcrypt = require("bcrypt");
 
 const Materia = require("../models/materia.model");
+const { check } = require("express-validator");
+const { existeMaestroById } = require("../helpers/db-validator");
 
 const getMaterias = async (req, res = response) => {
   const { query } = { estado: true };
@@ -27,8 +29,41 @@ const materiasPost = async (req, res) => {
     materia,
   });
 };
+// AQUI ESTOY TRABAJANDO
+
+const materiasPut = async (req, res) => {
+  const { id } = req.params;
+  const { maestroId, ...resto } = req.body;
+
+  try {
+    await check(maestroId).custom(existeMaestroById).run(req);
+
+    await Materia.findByIdAndUpdate(id, { maestro: maestroId, ...resto });
+
+    const materiaActualizada = await Materia.findById(id);
+
+    return res.status(200).json({
+      msg: "Materia actualizada exitosamente",
+      materia: materiaActualizada,
+    });
+  } catch (error) {
+    return res.status(400).json({ msg: error.message });
+  }
+};
+
+const asignarMaestroPut = async (req, res) => {
+  const { id } = req.params;
+  const { _id, nombre, ...resto } = req.body;
+  await Materia.findByIdAndUpdate(id, resto);
+  const materia = await Materia.findOne({ _id: id });
+  req.status(200).json({
+    msg: "Maestro asignado exitosamente",
+    materia,
+  });
+};
 
 module.exports = {
   getMaterias,
   materiasPost,
+  materiasPut,
 };

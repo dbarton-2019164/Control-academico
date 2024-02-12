@@ -1,5 +1,7 @@
 const { Router } = require("express");
 const { check } = require("express-validator");
+const { existeMaestroById, existeMateriaById } = require("../helpers/db-validator");
+
 const {
   getMaterias,
   materiasPost,
@@ -17,5 +19,17 @@ router.post(
   ],
   materiasPost
 );
+
+router.put(
+    "/:id",
+    [
+        check("id", "El id no tiene un formato de MongoDB").isMongoId(),
+        check("id").custom(existeMateriaById),
+        validarCampos,
+    ],
+    maet
+
+)
+
 
 module.exports = router;

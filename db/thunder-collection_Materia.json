@@ -1,0 +1,42 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Materia",
+    "dateExported": "2024-02-12T17:59:20.953Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "63efb6e9-ffb2-41cf-b38a-d43eaf1233d4",
+            "colId": "60f6b883-f359-4a67-a4ee-728bd80383d8",
+            "containerId": "",
+            "name": "materiasPOST",
+            "url": "http://localhost:3000/academic/usuarios",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-12T16:51:58.809Z",
+            "modified": "2024-02-12T17:08:11.417Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "\n{\n  \"nombre\":\"Lenguaje\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d2dddf8c-1ad9-49b0-bb7e-46e365200c84",
+            "colId": "60f6b883-f359-4a67-a4ee-728bd80383d8",
+            "containerId": "",
+            "name": "materiasGET",
+            "url": "http://localhost:3000/academic/usuarios",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-12T16:52:13.881Z",
+            "modified": "2024-02-12T16:52:26.354Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
