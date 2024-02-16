@@ -39,7 +39,7 @@ const usuariosPost = async (req, res) => {
   });
 };
 
-const materiasPut = async (req, res) => {
+const usuariosPut = async (req, res) => {
   const { id } = req.params;
   const { maestroId, correo, password, role, ...resto } = req.body;
   await Usuario.findByIdAndUpdate(id, resto);
@@ -71,14 +71,14 @@ const usuariosDelete = async (req, res) => {
 
   res.status(200).json({
     msg: "Usuario eliminado exitosamente",
-    materia,
+    usuario,
   });
 };
 
 module.exports = {
-  getMaterias,
-  materiasPost,
-  materiasPut,
-  getMateriaById,
-  materiasDelete,
+  getUser,
+  getUserById,
+  usuariosPost,
+  usuariosPut,
+  usuariosDelete,
 };
