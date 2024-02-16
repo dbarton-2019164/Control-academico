@@ -35,7 +35,7 @@ const usuariosPost = async (req, res) => {
 
   await usuario.save();
   res.status(200).json({
-    materia,
+    usuario,
   });
 };
 

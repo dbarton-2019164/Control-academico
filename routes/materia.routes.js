@@ -19,7 +19,10 @@ router.get("/", getMaterias);
 
 router.get(
   "/:id",
-  [check("id", "No es un id de MongoDB").isMongoId()],
+  [
+    check("id", "No es un id de MongoDB").isMongoId(),
+    check("id").custom(existeMateriaById),
+  ],
   getMateriaById
 );
 
