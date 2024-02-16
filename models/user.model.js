@@ -23,9 +23,18 @@ const UserSchema = Schema({
     type: Boolean,
     default: true,
   },
-
+  // Asignar ALUMNOS
   materia: [
-    // Asignar ALUMNOS
+    {
+      nombre: String,
+    },
+  ],
+  materia2: [
+    {
+      nombre: String,
+    },
+  ],
+  materia3: [
     {
       nombre: String,
     },
