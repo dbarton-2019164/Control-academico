@@ -8,7 +8,7 @@ const { existeMaestroById } = require("../helpers/db-validator");
 
 const getMaterias = async (req, res = response) => {
   const { query } = { estado: true };
-  
+
   const [total, materias] = await Promise.all([
     Materia.countDocuments(query),
     Materia.find(query),
@@ -59,7 +59,7 @@ const materiasPut = async (req, res) => {
     return res.status(400).json({ msg: error.message });
   }
 };
-
+/*
 const asignarMaestroPut = async (req, res) => {
   const { id } = req.params;
   const { _id, nombre, ...resto } = req.body;
@@ -70,7 +70,7 @@ const asignarMaestroPut = async (req, res) => {
     materia,
   });
 };
-
+*/
 const materiasDelete = async (req, res) => {
   const { id } = req.params;
   await Materia.findByIdAndUpdate(id, { estado: false });

@@ -27,16 +27,22 @@ const UserSchema = Schema({
   materia: [
     {
       nombre: String,
+      default: null,
+      require: true,
     },
   ],
   materia2: [
     {
       nombre: String,
+      default: null,
+      require: true,
     },
   ],
   materia3: [
     {
       nombre: String,
+      default: null,
+      require: true,
     },
   ],
 });
