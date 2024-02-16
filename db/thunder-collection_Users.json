@@ -1,0 +1,70 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Users",
+    "dateExported": "2024-02-16T17:51:19.482Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e26bf332-cd7e-4c50-bb56-a06d88eaf4ca",
+            "colId": "8bde4711-aed1-45b5-b4b4-2d5686a61763",
+            "containerId": "",
+            "name": "usuariosPOST",
+            "url": "http://localhost:3000/academic/usuarios",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-16T16:50:54.405Z",
+            "modified": "2024-02-16T17:12:14.155Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"👻👻👻\",\n  \"correo\": \"wazaaa@gmail.com\",\n  \"password\": \"123455\",\n  \"role\": \"STUDENT_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "aad02d61-802c-4048-8651-15ddc7543950",
+            "colId": "8bde4711-aed1-45b5-b4b4-2d5686a61763",
+            "containerId": "",
+            "name": "usuariosGET",
+            "url": "http://localhost:3000/academic/usuarios",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-16T16:57:24.160Z",
+            "modified": "2024-02-16T16:57:54.705Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "afa8e6b9-eb59-4295-bbe2-fc85e5864ea0",
+            "colId": "8bde4711-aed1-45b5-b4b4-2d5686a61763",
+            "containerId": "",
+            "name": "buscarGET",
+            "url": "http://localhost:3000/academic/usuarios/65cf976e9e23848c8af7fe5e",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-16T17:43:24.931Z",
+            "modified": "2024-02-16T17:44:01.102Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "787859aa-6f59-4189-8195-760c05ff5a1c",
+            "colId": "8bde4711-aed1-45b5-b4b4-2d5686a61763",
+            "containerId": "",
+            "name": "buscarGET Copy",
+            "url": "http://localhost:3000/academic/usuarios/65cf976e9e23848c8af7fe5e",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-16T17:44:24.154Z",
+            "modified": "2024-02-16T17:44:24.154Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

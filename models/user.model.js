@@ -16,6 +16,7 @@ const UserSchema = Schema({
   role: {
     type: String,
     required: true,
+    enum: ["TEACHER_ROLE", "STUDENT_MODEL"],
     default: "STUDENT_ROLE",
   },
   estado: {
@@ -23,21 +24,17 @@ const UserSchema = Schema({
     default: true,
   },
   // Asignar ALUMNOS
-  materia: [
-    {
-      nombre: String,
-    },
-  ],
-  materia2: [
-    {
-      nombre: String,
-    },
-  ],
-  materia3: [
-    {
-      nombre: String,
-    },
-  ],
+  materia: {
+    nombre: String,
+  },
+
+  materia2: {
+    nombre: String,
+  },
+
+  materia3: {
+    nombre: String,
+  },
 });
 
 module.exports = model("Usuario", UserSchema);
