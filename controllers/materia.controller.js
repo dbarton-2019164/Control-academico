@@ -8,7 +8,7 @@ const { existeMaestroById } = require("../helpers/db-validator");
 
 const getMaterias = async (req, res = response) => {
   const { query } = { estado: true };
-
+  
   const [total, materias] = await Promise.all([
     Materia.countDocuments(query),
     Materia.find(query),
@@ -17,6 +17,15 @@ const getMaterias = async (req, res = response) => {
   res.status(200).json({
     total,
     materias,
+  });
+};
+
+const getMateriaById = async (req, res) => {
+  const { id } = req.params;
+  const materia = await Materia.findOne({ _id: id });
+
+  res.status(200).json({
+    materia,
   });
 };
 
@@ -62,8 +71,22 @@ const asignarMaestroPut = async (req, res) => {
   });
 };
 
+const materiasDelete = async (req, res) => {
+  const { id } = req.params;
+  await Materia.findByIdAndUpdate(id, { estado: false });
+
+  const materia = await Materia.findOne({ _id: id });
+
+  res.status(200).json({
+    msg: "Materia eliminada exitosamente",
+    materia,
+  });
+};
+
 module.exports = {
   getMaterias,
   materiasPost,
   materiasPut,
+  getMateriaById,
+  materiasDelete,
 };

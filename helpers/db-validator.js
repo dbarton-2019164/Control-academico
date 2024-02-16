@@ -1,4 +1,4 @@
-const Materia = require("../models/materia");
+const Materia = require("../models/materia.model");
 const Usuario = require("../models/user.model");
 const existeMaestroById = async (id = "") => {
   const existeUsuario = await Usuario.findOne({ id });
@@ -11,7 +11,7 @@ const existeMaestroById = async (id = "") => {
 
 const existeMateriaById = async (id = "") => {
   const existeMateria = await Materia.findOne({ id });
-  if (!existeMateria) {
+  if (existeMateria) {
     throw new Error(`La materia con el id ${id} no existe`);
   }
 };
