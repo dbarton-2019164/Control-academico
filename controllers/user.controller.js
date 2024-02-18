@@ -7,7 +7,8 @@ const { check } = require("express-validator");
 const { existeMaestroById } = require("../helpers/db-validator");
 
 const getUser = async (req, res = response) => {
-  const { query } = { estado: true };
+  
+  const query = { estado: true };
 
   const [total, usuarios] = await Promise.all([
     Usuario.countDocuments(query),

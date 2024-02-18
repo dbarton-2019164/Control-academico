@@ -8,6 +8,8 @@ const UserSchema = Schema({
   correo: {
     type: String,
     required: [true, "El correo es obligatorio"],
+    unique: true,
+
   },
   password: {
     type: String,
@@ -16,7 +18,7 @@ const UserSchema = Schema({
   role: {
     type: String,
     required: true,
-    enum: ["TEACHER_ROLE", "STUDENT_MODEL"],
+    enum: ["TEACHER_ROLE", "STUDENT_ROLE"],
     default: "STUDENT_ROLE",
   },
   estado: {
