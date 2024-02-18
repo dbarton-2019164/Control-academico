@@ -40,6 +40,29 @@ const usuariosPost = async (req, res) => {
   });
 };
 
+const usuariosPostSTUDENT = async (req, res) => {
+  const { nombre, correo, password } = req.body;
+  const usuario = new Usuario({ nombre, correo, password });
+
+  await usuario.save();
+  res.status(200).json({
+    usuario,
+  });
+};
+
+
+const loginUsers = async (req, res) => {
+const { correo, password } = req.body;
+const usuario = await Usuario.findOne({correo: correo , password: password });
+if(!usuario){
+  return res.status(400).json({ msg: "Datos incorrectos" });
+}
+res.status(200).json({
+  msg: "Acceso concedido"
+})
+
+}
+
 const usuariosPut = async (req, res) => {
   const { id } = req.params;
   const { maestroId, correo, password, role, ...resto } = req.body;
@@ -82,4 +105,6 @@ module.exports = {
   usuariosPost,
   usuariosPut,
   usuariosDelete,
+  usuariosPostSTUDENT,
+  loginUsers
 };
