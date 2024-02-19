@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Inicio",
+    "dateExported": "2024-02-19T05:16:25.875Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "30c8f634-0b3a-4aa8-8b7b-a40946622141",
+            "colId": "112adfee-9684-41a4-a816-f15023bc7e47",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3000/academic/login/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-18T22:11:58.614Z",
+            "modified": "2024-02-19T04:37:09.798Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"corre114433@gmail.com\",\n  \"password\": \"1234567\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
