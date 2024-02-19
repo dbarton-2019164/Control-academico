@@ -50,6 +50,22 @@ const usuariosPostSTUDENT = async (req, res) => {
     usuario,
   });
 };
+const usuariosPostTEACHER = async (req, res) => {
+  const { nombre, correo, password} = req.body;
+  const role = "TEACHER_ROLE";
+  
+  try {
+    const usuario = new Usuario({ nombre, correo, password, role });
+    await usuario.save();
+    
+    res.status(200).json({
+      usuario,
+    });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
 
 
 const loginUsers = async (req, res) => {
@@ -119,6 +135,32 @@ const studentDelete = async (req, res) => {
   });
 };
 
+
+const teacherDelete = async (req, res) => {
+  const { id } = req.params;
+
+  const usuario = await Usuario.findOne({ _id: id });
+  const usuarioAutenticado = req.usuario;
+  if (usuarioAutenticado.role !== 'TEACHER_ROLE') {
+    return res.status(400).json({
+      msg: "No es un profesor"
+    })
+  }
+  if (usuarioAutenticado.id !== id) {
+    return res.status(400).json({
+      msg: "El usuario no puede eliminar otro usuario"
+    });
+  }
+  await Usuario.findByIdAndUpdate(id, { estado: false });
+
+  res.status(200).json({
+    msg: "Usuario eliminado exitosamente",
+    usuario,
+    usuarioAutenticado
+  });
+};
+
+
 const getMateriasUser = async (req, res) => {
  
   const usuarioAutenticado = req.usuario;
@@ -147,6 +189,31 @@ const studentPut = async (req, res) => {
   if (usuarioAutenticado.role === 'TEACHER_ROLE') {
     return res.status(400).json({
       msg: "No es un estudiante"
+    })
+  }
+  if (usuarioAutenticado.id !== id) {
+    return res.status(400).json({
+      msg: "El usuario no puede editar otro usuario"
+    });
+  }
+  await Usuario.findByIdAndUpdate(id, resto);
+
+  res.status(200).json({
+    msg: "Usuario editado exitosamente",
+    usuario,
+    usuarioAutenticado
+  });
+};
+
+
+const teachertPut = async (req, res) => {
+  const { id } = req.params;
+  const { maestroId, correo, password, role, ...resto } = req.body;
+  const usuario = await Usuario.findOne({ _id: id });
+  const usuarioAutenticado = req.usuario;
+  if (usuarioAutenticado.role !== 'TEACHER_ROLE') {
+    return res.status(400).json({
+      msg: "No es un profesor"
     })
   }
   if (usuarioAutenticado.id !== id) {
@@ -209,5 +276,8 @@ module.exports = {
   studentDelete,
   studentPut,
   studentCursoPut,
-  getMateriasUser
+  getMateriasUser,
+  usuariosPostTEACHER,
+  teachertPut,
+  teacherDelete
 };

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Users",
-    "dateExported": "2024-02-19T03:30:57.246Z",
+    "dateExported": "2024-02-19T05:16:40.924Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-18T17:53:47.497Z",
-            "modified": "2024-02-19T00:54:50.697Z",
+            "modified": "2024-02-19T04:10:16.957Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"maestro\",\n  \"correo\": \"correoMaestro@gmail.com\",\n  \"password\": \"123455\",\n  \"role\": \"TEACHER_ROLE\"\n}",
+                "raw": "{\n  \"nombre\": \"maestro\",\n  \"correo\": \"correoM4aestro@gmail.com\",\n  \"password\": \"123455\",\n  \"role\": \"TEACHER_ROLE\"\n}",
                 "form": []
             },
             "tests": []
@@ -59,7 +59,7 @@
             "name": "usuariosPUT",
             "url": "http://localhost:3000/academic/usuarios/65d247684144f7e359bb3d62",
             "method": "PUT",
-            "sortNum": 40000,
+            "sortNum": 45000,
             "created": "2024-02-18T17:53:47.500Z",
             "modified": "2024-02-18T20:04:34.047Z",
             "headers": [],

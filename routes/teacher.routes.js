@@ -3,10 +3,9 @@ const { check } = require("express-validator");
 const { correoExiste, existeUsuarioById } = require("../helpers/db-validator");
 
 const {
-  usuariosPostSTUDENT,
-  loginUsers,
-  studentDelete,
-  studentPut,
+  usuariosPostTEACHER,
+  teachertPut,
+  teacherDelete,
   studentCursoPut
 } = require("../controllers/user.controller");
 const { validarCampos } = require("../middlewares/validarCampos");
@@ -24,10 +23,8 @@ router.post(
     }),
     validarCampos,
   ],
-  usuariosPostSTUDENT
+  usuariosPostTEACHER
 );
-
-
 
 
 
@@ -40,7 +37,7 @@ router.put(
     check("nombre", "El nombre no puede estar vacío").not().isEmpty(),
     validarCampos,
   ],
-  studentPut
+  teachertPut
 );
 
 
@@ -54,7 +51,7 @@ router.delete(
     check("id").custom(existeUsuarioById),
     validarCampos,
   ],
-  studentDelete
+  teacherDelete
 );
 
 module.exports = router;

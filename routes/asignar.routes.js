@@ -2,8 +2,7 @@ const { Router } = require("express");
 const { check } = require("express-validator");
 const {materiaNombre, materiasUnicas} = require('../helpers/db-validator')
 const {
-  studentCursoPut,
-  getMateriasUser
+  studentCursoPut
 } = require("../controllers/user.controller");
 const { validarCampos } = require("../middlewares/validarCampos");
 const { validarJWT } = require("../middlewares/validar-jwt");
@@ -26,17 +25,6 @@ router.put(
   ],
   studentCursoPut
 );
-
-router.get(
-  "/",
-  [
-    validarJWT,
-    validarCampos
-  ],
-  getMateriasUser
-
-);
-
 
 
 

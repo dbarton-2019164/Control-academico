@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Materia",
-    "dateExported": "2024-02-19T03:31:07.221Z",
+    "dateExported": "2024-02-19T05:16:51.118Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-02-18T17:53:47.427Z",
-            "modified": "2024-02-19T03:06:53.299Z",
+            "modified": "2024-02-19T03:52:30.067Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "\n{\n  \"nombre\":\"Taller 3\"\n}",
+                "raw": "\n{\n  \"nombre\":\"Taller\"\n}",
                 "form": []
             },
             "tests": []
@@ -43,16 +43,16 @@
             "colId": "5f9ae393-275a-4e1f-bc83-86eefceb2091",
             "containerId": "",
             "name": "materiasPUT",
-            "url": "http://localhost:3000/academic/materias/65d2606522574c8836b096d4",
+            "url": "http://localhost:3000/academic/materias/65d2d07e6a370b607629c505",
             "method": "PUT",
             "sortNum": 40000,
             "created": "2024-02-18T17:53:47.429Z",
-            "modified": "2024-02-18T20:04:22.757Z",
+            "modified": "2024-02-19T03:53:09.706Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "\n{\n  \"nombre\":\"Ingles\"\n}",
+                "raw": "\n{\n  \"nombre\":\"Taller que era taller\"\n}",
                 "form": []
             },
             "tests": []

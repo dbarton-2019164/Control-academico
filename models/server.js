@@ -11,6 +11,8 @@ class Server {
     this.studentPath = "/academic/student";
     this.loginPath = "/academic/login";
     this.asignarPath = "/academic/asignar";
+    this.teacherPath = "/academic/teacher";
+    this.controlPath = "/academic/control";
     this.conectarDB();
 
     this.middlewares();
@@ -34,6 +36,10 @@ class Server {
     this.app.use(this.studentPath, require("../routes/student.routes"));
     this.app.use(this.loginPath, require("../routes/login.routes"));
     this.app.use(this.asignarPath, require("../routes/asignar.routes"));
+    this.app.use(this.teacherPath, require("../routes/teacher.routes"));
+    this.app.use(this.controlPath, require("../routes/crudProfesor"));
+
+    
   }
 
   listen() {
