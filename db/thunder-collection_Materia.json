@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Materia",
-    "dateExported": "2024-02-18T20:04:50.573Z",
+    "dateExported": "2024-02-19T03:31:07.221Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-02-18T17:53:47.427Z",
-            "modified": "2024-02-18T19:55:44.543Z",
+            "modified": "2024-02-19T03:06:53.299Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "\n{\n  \"nombre\":\"Taller\"\n}",
+                "raw": "\n{\n  \"nombre\":\"Taller 3\"\n}",
                 "form": []
             },
             "tests": []

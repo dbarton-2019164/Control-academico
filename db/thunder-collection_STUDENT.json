@@ -1,0 +1,109 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "STUDENT",
+    "dateExported": "2024-02-19T03:30:47.693Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1f55bfe0-0ce0-4ec2-af32-8a7d69528806",
+            "colId": "65de4c2b-ca9f-47c0-ba32-6099563d5df6",
+            "containerId": "",
+            "name": "registrarseSTUDENT",
+            "url": "http://localhost:3000/academic/student/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-18T20:12:32.675Z",
+            "modified": "2024-02-19T01:53:20.202Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Diego 6\",\n  \"correo\": \"corre6@gmail.com\",\n  \"password\": \"1234567\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4d6e8528-aa53-4309-8c30-bb09c9f36ad7",
+            "colId": "65de4c2b-ca9f-47c0-ba32-6099563d5df6",
+            "containerId": "",
+            "name": "putStudent",
+            "url": "http://localhost:3000/academic/student/65d2b48870627607ebc05f18",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-02-19T01:47:58.214Z",
+            "modified": "2024-02-19T02:08:49.962Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyYjQ4ODcwNjI3NjA3ZWJjMDVmMTgiLCJpYXQiOjE3MDgzMDc2MTMsImV4cCI6MTcwODMxMTIxM30.ccWg6kDciCYcpCR4TQEzi-4gS-zSF4J3oPfyOPepe5U"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"funciona 2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9da81143-1ae9-4762-a0cc-4d95669b7583",
+            "colId": "65de4c2b-ca9f-47c0-ba32-6099563d5df6",
+            "containerId": "",
+            "name": "deleteStudent",
+            "url": "http://localhost:3000/academic/usuarios/65d247684144f7e359bb3d62",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-02-19T00:22:25.019Z",
+            "modified": "2024-02-19T00:22:25.019Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5bf09daf-8416-4029-b8a8-df73d168985b",
+            "colId": "65de4c2b-ca9f-47c0-ba32-6099563d5df6",
+            "containerId": "",
+            "name": "putStudentMaterias",
+            "url": "http://localhost:3000/academic/asignar",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-02-19T02:46:32.239Z",
+            "modified": "2024-02-19T03:07:07.910Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyYjQ4ODcwNjI3NjA3ZWJjMDVmMTgiLCJpYXQiOjE3MDgzMTE3MDQsImV4cCI6MTcwODMxNTMwNH0.1Tjukqx6R7hL2szDbqVmC9NVHTSNXcdqnO0jLCKIkNU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"materia1\":\"Taller\",\n  \"materia2\":\"Taller 2\",\n   \"materia3\":\"Lenguaje\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b44db93c-25b8-41f4-acb2-3f47207c7a2b",
+            "colId": "65de4c2b-ca9f-47c0-ba32-6099563d5df6",
+            "containerId": "",
+            "name": "materiasDelUsuario",
+            "url": "http://localhost:3000/academic/asignar",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-19T03:22:25.108Z",
+            "modified": "2024-02-19T03:24:22.689Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyYjQ5MDcwNjI3NjA3ZWJjMDVmMWIiLCJpYXQiOjE3MDgzMTMwNTIsImV4cCI6MTcwODMxNjY1Mn0.z3lybX9_0bmWy3UM6-0yHwfoA7pvKNJ40Gc9doRvk9w"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

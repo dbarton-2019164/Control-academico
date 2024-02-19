@@ -27,8 +27,16 @@ const existeMateriaById = async (id = "") => {
     }
   }
 
-const existeUsuarioById = async (id = "") => {
+  async function materiaNombre(nombre = "") {
+    const materia = await Materia.findOne({ nombre: nombre });
+    if(!materia){
+      throw new Error(`La materia no existe`);
+    }
+  }
 
+
+const existeUsuarioById = async (id = "") => {
+  
     const existeUsuario = await Usuario.findOne({ _id: id });
     if (!existeUsuario) {
       throw new Error(`El usuario con el id ${id} no existe`);
@@ -43,11 +51,21 @@ async function correoExiste(correo = "") {
   }
 }
 
+const materiasUnicas = (value, { req }) => {
+  const materias = [req.body.materia1, req.body.materia2, req.body.materia3];
+  const uniqueMaterias = new Set(materias);
+  if (uniqueMaterias.size !== materias.length) {
+    throw new Error('Las tres materias deben ser diferentes entre sí');
+  }
+  return true;
+};
 
 module.exports = {
   existeMaestroById,
   existeMateriaById,
   correoExiste,
   existeUsuarioById,
-  nombreExiste
+  nombreExiste,
+  materiaNombre,
+  materiasUnicas
 };

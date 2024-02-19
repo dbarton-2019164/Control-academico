@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Users",
-    "dateExported": "2024-02-18T20:05:01.501Z",
+    "dateExported": "2024-02-19T03:30:57.246Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-18T17:53:47.497Z",
-            "modified": "2024-02-18T18:41:07.066Z",
+            "modified": "2024-02-19T00:54:50.697Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"Diego\",\n  \"correo\": \"diegobarton4@gmail.com\",\n  \"password\": \"123455\",\n  \"role\": \"TEACHER_ROLE\"\n}",
+                "raw": "{\n  \"nombre\": \"maestro\",\n  \"correo\": \"correoMaestro@gmail.com\",\n  \"password\": \"123455\",\n  \"role\": \"TEACHER_ROLE\"\n}",
                 "form": []
             },
             "tests": []

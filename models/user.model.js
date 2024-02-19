@@ -26,16 +26,16 @@ const UserSchema = Schema({
     default: true,
   },
   // Asignar ALUMNOS
-  materia: {
-    nombre: String,
+  materia1: {
+    type: String,
   },
 
   materia2: {
-    nombre: String,
+    type: String,
   },
 
   materia3: {
-    nombre: String,
+    type: String,
   },
 });
 
