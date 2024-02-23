@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Inicio",
-    "dateExported": "2024-02-23T14:54:01.137Z",
+    "dateExported": "2024-02-23T16:56:03.899Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,7 +14,7 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-02-23T13:19:35.682Z",
-            "modified": "2024-02-23T14:48:17.464Z",
+            "modified": "2024-02-23T16:40:47.255Z",
             "headers": [],
             "params": [],
             "body": {

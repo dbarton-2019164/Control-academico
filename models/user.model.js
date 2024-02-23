@@ -9,7 +9,6 @@ const UserSchema = Schema({
     type: String,
     required: [true, "El correo es obligatorio"],
     unique: true,
-
   },
   password: {
     type: String,
@@ -25,18 +24,20 @@ const UserSchema = Schema({
     type: Boolean,
     default: true,
   },
-  // Asignar ALUMNOS
-  materia1: {
-    type: String,
-  },
 
-  materia2: {
-    type: String,
-  },
-
-  materia3: {
-    type: String,
+  materias: {
+    type: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "./materia.model.js",
+      },
+    ],
+    validate: [arrayLimit, "{PATH} exceeds the limit of 3"],
   },
 });
+
+function arrayLimit(val) {
+  return val.length <= 3;
+}
 
 module.exports = model("Usuario", UserSchema);

@@ -159,11 +159,17 @@ const getMateriasUser = async (req, res) => {
     });
   }
   const usuario = await Usuario.findOne({ _id: usuarioAutenticado.id });
-  const materiasUsuario = {
-    materia1: usuario.materia1,
-    materia2: usuario.materia2,
-    materia3: usuario.materia3,
-  };
+
+  //const materiasUsuario = usuario.materias;
+  const materiasUsuario = [];
+
+  for (const materiaId of usuario.materias) {
+    const materia = await Materia.findOne({ _id: materiaId });
+    if (materia) {
+      materiasUsuario.push(materia.nombre);
+    }
+  }
+
   res.status(200).json({
     materiasUsuario,
   });
@@ -216,23 +222,50 @@ const teachertPut = async (req, res) => {
     usuarioAutenticado,
   });
 };
-
 const studentCursoPut = async (req, res) => {
-  const { maestroId, correo, password, role, nombre, ...resto } = req.body;
+  try {
+    const { materia } = req.body;
 
-  const usuarioAutenticado = req.usuario;
-  if (usuarioAutenticado.role === "TEACHER_ROLE") {
-    return res.status(400).json({
-      msg: "No es un estudiante",
+    const usuarioAutenticado = req.usuario;
+    if (usuarioAutenticado.role === "TEACHER_ROLE") {
+      return res.status(400).json({
+        msg: "No es un estudiante",
+      });
+    }
+
+    if (usuarioAutenticado.materias.length >= 3) {
+      return res.status(400).json({
+        msg: "El usuario ya tiene tres materias asignadas",
+      });
+    }
+
+    const materiaEncontrada = await Materia.findOne({ nombre: materia });
+    if (!materiaEncontrada) {
+      return res.status(404).json({
+        msg: "La materia no existe",
+      });
+    }
+
+    if (usuarioAutenticado.materias.includes(materiaEncontrada._id)) {
+      return res.status(400).json({
+        msg: "La materia ya está asignada al usuario",
+      });
+    }
+
+    usuarioAutenticado.materias.push(materiaEncontrada._id);
+    await usuarioAutenticado.save();
+
+    res.status(200).json({
+      msg: "Materia agregada exitosamente",
+      usuarioAutenticado,
+    });
+  } catch (error) {
+    console.error("Error al agregar materia al usuario:", error);
+    res.status(500).json({
+      msg: "Error del servidor",
+      error: error.message,
     });
   }
-
-  await Usuario.findByIdAndUpdate(usuarioAutenticado.id, resto);
-
-  res.status(200).json({
-    msg: "Cursos agregados exitosamente",
-    usuarioAutenticado,
-  });
 };
 
 const usuariosPut = async (req, res) => {

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "STUDENT",
-    "dateExported": "2024-02-23T14:54:54.913Z",
+    "dateExported": "2024-02-23T16:56:11.651Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-02-23T13:19:35.715Z",
-            "modified": "2024-02-23T14:35:52.495Z",
+            "modified": "2024-02-23T16:05:48.555Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"Diego 6\",\n  \"correo\": \"corre45@gmail.com\",\n  \"password\": \"1234567\"\n}",
+                "raw": "{\n  \"nombre\": \"user\",\n  \"correo\": \"dba@gmail.com\",\n  \"password\": \"1234567\"\n}",
                 "form": []
             },
             "tests": []
@@ -76,17 +76,17 @@
             "method": "PUT",
             "sortNum": 20000,
             "created": "2024-02-23T13:19:35.719Z",
-            "modified": "2024-02-23T14:49:44.060Z",
+            "modified": "2024-02-23T16:06:39.842Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ4YWNlNzZjNzQ3OGMwNTIwZDI2NTUiLCJpYXQiOjE3MDg2OTg4NzcsImV4cCI6MTcwODcwMjQ3N30.ij4fSl6DfrAJVuwgNatU4JzrPTLgMvpJn_kpsRmdYlA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ4YzI1YzhjMTRiYTA1NzAwODAxNjkiLCJpYXQiOjE3MDg3MDQzNTIsImV4cCI6MTcwODcwNzk1Mn0.UBCSSdazef-vxwMqEwPYAX2zUaFEp9_IpglEpZMNPyw"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n \"materia1\":\"Taller 1\",\n  \"materia2\":\"Taller 2\",\n   \"materia3\":\"Taller 3\"\n}",
+                "raw": "{\n \"materia\":\"Taller 3\"\n}",
                 "form": []
             },
             "tests": []
@@ -100,11 +100,11 @@
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-02-23T13:19:35.720Z",
-            "modified": "2024-02-23T14:47:43.392Z",
+            "modified": "2024-02-23T16:10:06.951Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ4YWNlNzZjNzQ3OGMwNTIwZDI2NTUiLCJpYXQiOjE3MDg2OTg4NzcsImV4cCI6MTcwODcwMjQ3N30.ij4fSl6DfrAJVuwgNatU4JzrPTLgMvpJn_kpsRmdYlA"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ4YzI1YzhjMTRiYTA1NzAwODAxNjkiLCJpYXQiOjE3MDg3MDQzNTIsImV4cCI6MTcwODcwNzk1Mn0.UBCSSdazef-vxwMqEwPYAX2zUaFEp9_IpglEpZMNPyw"
                 }
             ],
             "params": [],
