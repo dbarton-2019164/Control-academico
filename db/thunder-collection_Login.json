@@ -1,25 +1,25 @@
 {
     "client": "Thunder Client",
     "collectionName": "Inicio",
-    "dateExported": "2024-02-19T03:30:29.229Z",
+    "dateExported": "2024-02-23T13:28:50.425Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "30c8f634-0b3a-4aa8-8b7b-a40946622141",
-            "colId": "112adfee-9684-41a4-a816-f15023bc7e47",
+            "_id": "df70feaa-eb49-4de3-bca8-9a340639b4ad",
+            "colId": "f2c9cf80-07f7-4564-9322-fd009007126e",
             "containerId": "",
             "name": "login",
-            "url": "http://localhost:3000/academic/student/",
+            "url": "http://localhost:3000/academic/login/",
             "method": "GET",
             "sortNum": 10000,
-            "created": "2024-02-18T22:11:58.614Z",
-            "modified": "2024-02-18T22:11:58.614Z",
+            "created": "2024-02-23T13:19:35.682Z",
+            "modified": "2024-02-23T13:25:09.240Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\": \"correoEstudiante@gmail.com\",\n  \"password\": \"123455\"\n}",
+                "raw": "{\n  \"correo\": \"corre1144333@gmail.com\",\n  \"password\": \"1234567\"\n}",
                 "form": []
             },
             "tests": []
