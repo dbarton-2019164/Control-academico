@@ -1,39 +1,39 @@
 {
     "client": "Thunder Client",
     "collectionName": "teacher",
-    "dateExported": "2024-02-19T05:16:19.004Z",
+    "dateExported": "2024-02-23T14:54:48.657Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "ed860845-089b-4ea8-ba76-54951c33c3f1",
-            "colId": "9f5ee8c8-25cc-4cc9-a258-c005d8fd3c66",
+            "_id": "30c6e1fb-fa78-4983-a31e-ac4d0ad1d29e",
+            "colId": "4e7e9684-6ccd-42c5-b712-7008a9e07179",
             "containerId": "",
             "name": "registrarseTEACHER",
             "url": "http://localhost:3000/academic/teacher/",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-02-19T04:07:04.549Z",
-            "modified": "2024-02-19T04:14:39.427Z",
+            "created": "2024-02-23T13:19:35.737Z",
+            "modified": "2024-02-23T14:48:11.534Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"Diego MAESTRO 3\" ,\n  \"correo\": \"corre1144333@gmail.com\",\n  \"password\": \"1234567\"\n}",
+                "raw": "{\n  \"nombre\": \"Diego MAESTRO 3\" ,\n  \"correo\": \"masetro@gmail.com\",\n  \"password\": \"1234567\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "36601bce-6267-45d6-832b-3a2a8f512527",
-            "colId": "9f5ee8c8-25cc-4cc9-a258-c005d8fd3c66",
+            "_id": "24d7e6a2-74a8-4571-b158-57a471e3fca2",
+            "colId": "4e7e9684-6ccd-42c5-b712-7008a9e07179",
             "containerId": "",
             "name": "materiasProfesorDELETE",
             "url": "http://localhost:3000/academic/control/65d2db063141fef11b154b0b",
             "method": "DELETE",
             "sortNum": 10000,
-            "created": "2024-02-19T04:43:34.573Z",
-            "modified": "2024-02-19T05:05:53.039Z",
+            "created": "2024-02-23T13:19:35.739Z",
+            "modified": "2024-02-23T13:19:35.739Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -44,15 +44,15 @@
             "tests": []
         },
         {
-            "_id": "b6531000-813f-4fe4-a2b8-7870fc25ebcc",
-            "colId": "9f5ee8c8-25cc-4cc9-a258-c005d8fd3c66",
+            "_id": "510fec1e-d6c4-499d-90f9-6ecad73efbf0",
+            "colId": "4e7e9684-6ccd-42c5-b712-7008a9e07179",
             "containerId": "",
             "name": "materiasProfesorPUT",
             "url": "http://localhost:3000/academic/control/65d2db063141fef11b154b0b",
             "method": "PUT",
             "sortNum": 15000,
-            "created": "2024-02-19T05:14:18.844Z",
-            "modified": "2024-02-19T05:16:14.598Z",
+            "created": "2024-02-23T13:19:35.741Z",
+            "modified": "2024-02-23T13:19:35.741Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -63,39 +63,39 @@
             "tests": []
         },
         {
-            "_id": "c0867b17-73bc-45e3-a53d-9e02db6a51ad",
-            "colId": "9f5ee8c8-25cc-4cc9-a258-c005d8fd3c66",
+            "_id": "788ca1ad-d03d-42f6-a2c3-a5ef250a7d90",
+            "colId": "4e7e9684-6ccd-42c5-b712-7008a9e07179",
             "containerId": "",
             "name": "materiasTeacherPOST",
             "url": "http://localhost:3000/academic/control",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2024-02-19T04:27:43.576Z",
-            "modified": "2024-02-19T04:47:21.387Z",
+            "created": "2024-02-23T13:19:35.738Z",
+            "modified": "2024-02-23T14:49:12.879Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQyZDVhNjhjZTI5Nzk2M2IzNWIyMjQiLCJpYXQiOjE3MDgzMTc0MjksImV4cCI6MTcwODMyMTAyOX0.9aRQrCRRoMgH6APiVNcDy82yehQXt8rgKvY_G8Aus-s"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ4YjAyYjRlNTVhNGE1YzFhMWNkY2MiLCJpYXQiOjE3MDg2OTk2OTcsImV4cCI6MTcwODcwMzI5N30.FlUMHIms42wuyNLt5gfFBEZ0Gf-hzU6NTk3YDIkQnmE"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "\n{\n  \"nombre\":\"Taller 33\"\n}",
+                "raw": "\n{\n  \"nombre\":\"Taller 7\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "6117e981-42c1-4a2c-921c-dcad636ea7dc",
-            "colId": "9f5ee8c8-25cc-4cc9-a258-c005d8fd3c66",
+            "_id": "5d09afb7-59bd-4fb4-9860-1c7d14f40f2f",
+            "colId": "4e7e9684-6ccd-42c5-b712-7008a9e07179",
             "containerId": "",
             "name": "materiasProfesorGET Copy",
             "url": "http://localhost:3000/academic/control/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-02-19T05:03:20.652Z",
-            "modified": "2024-02-19T05:03:20.652Z",
+            "created": "2024-02-23T13:19:35.740Z",
+            "modified": "2024-02-23T13:19:35.740Z",
             "headers": [
                 {
                     "name": "x-token",

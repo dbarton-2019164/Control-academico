@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Inicio",
-    "dateExported": "2024-02-23T13:28:50.425Z",
+    "dateExported": "2024-02-23T14:54:01.137Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2024-02-23T13:19:35.682Z",
-            "modified": "2024-02-23T13:25:09.240Z",
+            "modified": "2024-02-23T14:48:17.464Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"correo\": \"corre1144333@gmail.com\",\n  \"password\": \"1234567\"\n}",
+                "raw": "{\n  \"correo\": \"masetro@gmail.com\",\n  \"password\": \"1234567\"\n}",
                 "form": []
             },
             "tests": []
